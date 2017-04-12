@@ -206,7 +206,7 @@
                 weeksToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7) % 4,
                 months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368),
                 monthsToYear: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368) % 12,
-                years: Math.abs(this.finalDate.getFullYear() - now.getFullYear()),
+                years: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368 / 12),
                 totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24),
                 totalHours: Math.floor(this.totalSecsLeft / 60 / 60),
                 totalMinutes: Math.floor(this.totalSecsLeft / 60),
