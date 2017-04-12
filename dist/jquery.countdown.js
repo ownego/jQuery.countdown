@@ -1,6 +1,6 @@
 /*!
  * The Final Countdown for jQuery v2.2.0 (http://hilios.github.io/jQuery.countdown/)
- * Copyright (c) 2016 Edson Hilios
+ * Copyright (c) 2017 Edson Hilios
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -56,6 +56,7 @@
     var DIRECTIVE_KEY_MAP = {
         Y: "years",
         m: "months",
+        Z: "monthsToYear",
         n: "daysToMonth",
         d: "daysToWeek",
         w: "weeks",
@@ -204,6 +205,7 @@
                 weeks: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7),
                 weeksToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7) % 4,
                 months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368),
+                monthsToYear: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368) % 12,
                 years: Math.abs(this.finalDate.getFullYear() - now.getFullYear()),
                 totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24),
                 totalHours: Math.floor(this.totalSecsLeft / 60 / 60),

@@ -55,6 +55,7 @@
   var DIRECTIVE_KEY_MAP = {
     'Y': 'years',
     'm': 'months',
+    'Z': 'monthsToYear',
     'n': 'daysToMonth',
     'd': 'daysToWeek',
     'w': 'weeks',
@@ -242,6 +243,7 @@
         weeks       : Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7),
         weeksToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7) % 4,
         months      : Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368),
+	monthsToYear: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368) % 12,
         years       : Math.abs(this.finalDate.getFullYear()-now.getFullYear()),
         totalDays   : Math.floor(this.totalSecsLeft / 60 / 60 / 24),
         totalHours  : Math.floor(this.totalSecsLeft / 60 / 60),
